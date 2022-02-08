@@ -1,0 +1,9 @@
+export declare const nxVersion = "*";
+export declare const serverlessVersion = "^2.29.0";
+export declare const serverlessOfflineVersion = "7.0.0";
+export declare const serverlessOptimizeVersion = "4.2.1-rc.1";
+export declare const awsSdkVersion = "*";
+export declare const awsTypeLambdaVersion = "^8.10.40";
+export declare const awsServerlessExpressVersion = "^3.3.3";
+export declare const serverlessApigwBinaryVersion = "^0.4.4";
+export declare const expressVersion = "^4.17.1";

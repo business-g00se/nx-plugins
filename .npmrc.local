@@ -1,3 +1,0 @@
-; Set a new registry for a scoped package
-@flowaccount:registry=http://localhost:4872
-//localhost:4872/:_authToken="fake=="

@@ -1,56 +1,355 @@
 <p float="left">
 <img src="https://raw.githubusercontent.com/nrwl/nx/master/nx-logo.png" height="100">
-<img src="https://angular.io/assets/images/logos/angular/angular.svg" height="145">
-<!-- <img src="https://angular.io/generated/images/marketing/concept-icons/universal.png" height="120"> -->
+<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--ipV6F4tM--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://raw.githubusercontent.com/serverless/assets/master/Icon/Framework/PNG/Serverless_Framework-icon01.png" height="120">
 <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" height="145">
-<img src="https://raw.githubusercontent.com/scullyio/scully/main/assets/logos/PNG/scullyio-logo.png" height="145">
 </p>
 
 <div align="left">
 
 [![License](https://img.shields.io/npm/l/@flowaccount/nx-serverless.svg?style=flat-square)]()
+
+</div>
+
+<div align="left">
+
+[![serverless](http://public.serverless.com/badges/v3.svg)](https://www.serverless.com)
+[![@flowaccount/nx-serverless](https://img.shields.io/badge/%40flowaccount-nx--serverless-blue)](https://github.com/flowaccount/nx-plugins/tree/master/libs/nx-serverless)
+[![NPM Version](https://badge.fury.io/js/%40flowaccount%2Fnx-serverless.svg)](https://www.npmjs.com/@flowaccount/nx-serverless)
+[![Typescript](https://badgen.net/badge/icon/typescript?icon=typescript&label)](https://www.typescriptlang.org/)
 [![CircleCI](https://circleci.com/gh/flowaccount/nx-plugins.svg?style=svg)](https://circleci.com/gh/flowaccount/nx-plugins)
+
+</div>
 
 <hr>
 
-# What is Nx
+# What is @flowaccount/nx-serverless
 
-🔎 **Extensible Dev Tools for Monorepos.**
-
-# What is @flowaccount/nx-plugins
-
-🔎 **Extensible Continous Delivery/Depolyment Tools on top of Nx workspace for seamless deployments with frameworks like Serverless Framework and aws-cdk (Infrastructure as a code)**
+🔎 **Extensible Continous Delivery/Depolyment Tools on top of Nx workspace for Serverless Framework. Because managing multiple lambda in one repository is an awesome thing!**
 
 ## Our Mission
 
-Nx is great and simplifying the tool-chains for _continous integrations_ inside a mono-repository. As a developer who has to do operations as well, we would like to see the delivery/deployment side of things to be super awsome as well!
+Simplify any workflow that can be abstracted into one command using the same configuration structure as `workspace.json/angular.json`. Make development life-cycle easier, more effective and having less rituals. Communications through configurations and not documentations.
 
-**So we decided to build plugins on top of the nx workspace to add the ability of seamless delivery/deployment of our projects to the designated cloud providers. :metal:**
+**join our community** [@flowaccount/community](https://join.slack.com/t/flowaccountcommunity/shared_invite/zt-10dw6janp-JVE7k6y7OXf8ET9t2Y2BKQ)
 
-As time goes by, we have been adding serveral open-source utilities and plugins into this repository both nx related and non-nx related. We add those that benefited us as a developer in the hope of benefiting someone out there as well!
+## Feature sets to support for Serverless Framework
 
-**Please leave us a note if you think it does benefit you and open a Feature request if you think it can be more of a benefit if having those features!**
+### Frameworks Schematics
 
-### Plugins available
+| Framework Name                   | AWS                
+| -------------------------------- | ------------------
+| Node-Typescript (Webpack)        | :white_check_mark: 
+| :white_check_mark:               | :calendar:         
+| Express-js (Typescript-compiler) | :white_check_mark: 
 
-[![@flowaccount/nx-serverless](https://img.shields.io/badge/%40flowaccount-nx--serverless-blue)](https://github.com/flowaccount/nx-plugins/tree/master/libs/nx-serverless)
-[![NPM Version](https://badge.fury.io/js/%40flowaccount%2Fnx-serverless.svg)](https://www.npmjs.com/@flowaccount/nx-serverless)
+### Serverless Framework Commands
 
-[![@flowaccount/nx-aws-cdk](https://img.shields.io/badge/%40flowaccount-nx--aws--cdk-blue)](https://github.com/flowaccount/nx-plugins/tree/master/libs/nx-aws-cdk)
+| Command Names      | AWS                
+| ------------------ | ------------------ 
+| Deploy             | :white_check_mark: 
+| Destroy            | :white_check_mark:
+| Sls Command        | :white_check_mark:
+| Serverless-offline | :white_check_mark:
 
-[![@flowaccount/nx-aws-cdk](https://img.shields.io/badge/%40flowaccount-aws--cdk--stack-blue)](https://github.com/flowaccount/nx-plugins/tree/master/libs/aws-cdk-stack)
+### Supported Serverless Framework Versions
 
-[![@flowaccount/scully-plugin-angular-delay](https://img.shields.io/badge/%40flowaccount-scully--plugin--angular--delay-blue)](https://github.com/flowaccount/nx-plugins/tree/master/libs/scully-plugin-angular-delay)
-[![NPM Version](https://badge.fury.io/js/%40flowaccount%2Fscully-plugin-angular-delay.svg)](https://www.npmjs.com/@flowaccount/scully-plugin-angular-delay)
+| Versions | Status             |
+| -------- | ------------------ |
+| 1.0+     | :white_check_mark: |
+| 2.0+     | :white_check_mark: |
 
-[![@flowaccount/scully-plugin-lazy-load-picture-tag](https://img.shields.io/badge/%40flowaccount-scully--plugin--lazy--load--picture--tag-blue)](https://github.com/flowaccount/nx-plugins/tree/master/libs/scully-plugin-lazy-load-picture-tag)
-[![NPM Version](https://badge.fury.io/js/%40flowaccount%2Fscully-plugin-lazy-load-picture-tag.svg)](https://www.npmjs.com/@flowaccount/scully-plugin-lazy-load-picture-tag)
+### Builders wrapped before packaging/deployment
 
-[![@flowaccount/scully-plugin-google-analytics](https://img.shields.io/badge/%40flowaccount-scully--plugin--google--analytics-blue)](https://github.com/flowaccount/nx-plugins/tree/master/libs/scully-plugin-google-analytics)
-[![NPM Version](https://badge.fury.io/js/%40flowaccount%2Fscully-plugin-google-analytics.svg)](https://www.npmjs.com/@flowaccount/scully-plugin-google-analytics)
+| Builder Names       |                    |
+| ------------------- | ------------------ |
+| Webpack compiler    | :white_check_mark: |
+| Typescript compiler | :white_check_mark: |
+
+Whats special about the plugin is that, you **DO NOT** need to use `serverless-wepack` or `serverless-typescript` plugins anymore! The library uses angular builders to _build_ or typescript compilers to _compile_ your code for you into javascript before _packaging_ them into a zip file and _deploy_ them to the serverless cloud.
+
+### Package.json dependency resolvers
+
+| Resolver Names |                    |
+| -------------- | ------------------ |
+| Webpack stats  | :white_check_mark: |
+| Depcheck       | :white_check_mark: |
+
+The other special thing that the library does is, it uses `webpack stats` to build up your `dependencies` and write a `package.json` into your `dist` folder in the attempt to minimize the amount of `dependencies` in your `node_modules` needed to be uploaded to the cloud.
+
+For typescript compilers it uses `dep-checks` to resolve the dependencies and write up a `package.json` file
+
+## Getting Started
+
+### To Deploy an Existing Angular Application adding Ng-Universal in the process
+
+First you need to create an nx workspace to get started!
+
+## Using npx
+
+```bash
+npx create-nx-workspace # Then you got to use yarn/npm
+// if start with angular presets
+nx add @flowaccount/nx-serverless # or with these options --project=my-app --provider=aws --addUniversal=yes
+// else
+npm install @flowaccount/nx-serverless --save-dev
+```
+
+## Using npm
+
+```bash
+npm init nx-workspace
+// if start with angular presets
+npm run nx add @flowaccount/nx-serverless # or with these options --project=my-app --provider=aws --addUniversal=yes
+// else
+npm install @flowaccount/nx-serverless --save-dev
+```
+
+## Using yarn
+
+```bash
+yarn create nx-workspace
+// if start with angular presets
+yarn nx add @flowaccount/nx-serverless # or with these options --project=my-app --provider=aws --addUniversal=yes
+// else
+yarn add --dev @flowaccount/nx-serverless
+```
+
+## Deploying/Compiling application (Assuming you have nx added globally, otherwise use npx/npm/yarn!)
+
+```bash
+nx run my-app:offline # to run the universal app offline checking serverless works locally
+nx deploy my-app # to deploy the app
+nx run my-app:destroy # to destroy the app
+nx run my-app:compile # to compile only the serverless part of the app
+```
+
+## Running custom sls commands application (Assuming you have nx added globally, otherwise use npx/npm/yarn!)
+
+```bash
+nx run my-app:sls # to run the custom sls commands as per what you need!
+```
+
+## To Create and Deploy Node-Typescript Serverless Application
+
+**Using npx**
+
+```bash
+npx create-nx-workspace # Then you got to use yarn/npm
+nx g @flowaccount/nx-serverless:api-serverless --name=myapi --provider=aws
+```
+
+**Using npm**
+
+```bash
+npm init nx-workspace
+nx g @flowaccount/nx-serverless:api-serverless --name=myapi --provider=aws
+```
+
+**Using yarn**
+
+```bash
+yarn create nx-workspace
+nx g @flowaccount/nx-serverless:api-serverless --name=myapi --provider=aws
+```
+
+**Deploying/Compiling application (Assuming you have nx added globally, otherwise use npx/npm/yarn!)**
+
+```bash
+nx serve myapi --port=7777 # to serve the api locally on port 7777
+nx deploy myapi --stage=dev# to deploy the api
+nx build myapi # to build the api
+```
+
+**To Debug your deployments**
+Edit the `env.json` files generated by the schematics. change `SLS_DEBUG` to `true`
+
+## To ship your assets (html,css,js,img etc)
+
+```json
+   "assets": [
+              "apps/app/src/favicon.ico",
+              "apps/app/src/robots.txt",
+              "apps/app/src/manifest.webmanifest",
+              {
+                "glob": "**/*",
+                "input": "libs/shared/ui-theme/assets",
+                "output": "./assets"
+              }
+  ],
+```
+
+## For Node-Typescript Api Application
+
+the resulting file tree will look like this:
+
+```bash
+<workspace name>/
+├── apps/
+│   ├── myapi/
+|   ├────────src/handler.ts
+|   ├────────jest.config.js
+|   ├────────tsconfig.json
+|   ├────────serverless.yml
+|   ├────────tsconfig.app.json
+|   ├────────tsconfig.spec.json
+|   ├────────tslint.json
+├── libs/
+├── tools/
+├── nx.json
+├── package.json
+├── tsconfig.json
+└── tslint.json
+```
+
+you workspace.json will be added with these
+
+```json
+"build": {
+  "builder": "@flowaccount/nx-serverless:build",
+  "configurations": {
+   ...
+  },
+  "options": {
+    ...
+  }
+},
+"deploy": {
+  "builder": "@flowaccount/nx-serverless:deploy",
+  "options": {
+    "waitUntilTargets": ["myapi:some-other-builder"],
+    "buildTarget": "myapi:build:production",
+    "config": "apps/myapi/serverless.yml",
+    "location": "dist/static/apps/myapi",
+    "package": "dist/static/apps/myapi"
+  },
+    "configurations": {
+    "staging": {
+      "buildTarget": "myapi:build:staging",
+      "waitUntilTargets": ["myapi:some-other-builder:staging"],
+      "stage": "staging"
+    },
+    "production": {
+      "buildTarget": "myapi:build:production",
+      "waitUntilTargets": ["myapi:some-other-builder:production"],
+      "stage": "production"
+    }
+  }
+},
+"destroy": {
+  "builder": "@flowaccount/nx-serverless:destroy",
+  "options": {
+   ...
+  }
+},
+"sls": {
+  "builder": "@flowaccount/nx-serverless:sls",
+  "options": {
+    ...
+  }
+ }
+}
+"lint": {
+  "builder": "@angular-devkit/build-angular:tslint",
+  "options": {
+   ...
+  }
+},
+"serve": {
+  "builder": "@flowaccount/nx-serverless:offline",
+  "configurations": {
+    ...
+  },
+  "options": {
+    ...
+  }
+},
+"test": {
+  "builder": "@nrwl/jest:jest",
+  "options": {
+    ...
+  }
+ }
+}
+```
+
+## For Expressjs/Angular Universal Application
+
+the resulting file tree will look like this:
+
+```bash
+<workspace name>/
+├── apps/
+│   ├── my-app/
+|   ├───────────────handler.ts
+|   ├───────────────serverless.yml
+|   ├───────────────tsconfig.serverless.json
+├── libs/
+├── tools/
+├── nx.json
+├── package.json
+├── tsconfig.json
+└── tslint.json
+```
+
+The existing angular project in workspace.json/angular.json will be updated with these sections
+
+```json
+"compile": {
+  "builder": "@flowaccount/nx-serverless:compile",
+  "configurations": {
+   ...
+  },
+  "options": {
+   ...
+  }
+},
+"deploy": {
+  "builder": "@flowaccount/nx-serverless:deploy",
+  "options": {
+    ...
+  }
+},
+"destroy": {
+  "builder": "@flowaccount/nx-serverless:destroy",
+  "options": {
+  ...
+  }
+},
+"offline": {
+  "builder": "@flowaccount/nx-serverless:offline",
+  "configurations": {
+   ...
+  },
+  "options": {
+   ...
+  }
+ }
+}
+"sls": {
+        "builder": "@flowaccount/nx-serverless:sls",
+        "options": {
+          "waitUntilTargets": [],
+          "buildTarget": "my-app:build:production",
+          "config": "apps/my-app/serverless.yml",
+          "location": "dist/apps/my-app",
+          "package": "dist/apps/my-app",
+          "command": "package",
+         },
+        "configurations": {
+          "deploy-dev": {
+            "buildTarget": "my-app:build:dev",
+            "command": "deploy",
+            "stage": "dev"
+          },
+            "deploy-production": {
+            "buildTarget": "my-app:build:production",
+            "command": "deploy",
+            "stage": "prod"
+          }
+        }
+    }
+```
 
 ## Want to help?
 
 You are most welcome to help! Please file a bug or submit a PR, read the [guidelines for contributing](https://github.com/flowaccount/nx-plugins/blob/master/CONTRIBUTING.md) and start right on!
-
-**join our community** [@flowaccount/community](https://join.slack.com/t/flowaccountcommunity/shared_invite/zt-10dw6janp-JVE7k6y7OXf8ET9t2Y2BKQ)
