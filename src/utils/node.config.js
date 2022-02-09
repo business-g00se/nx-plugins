@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getNodeWebpackConfig = void 0;
-const webpack_merge_1 = require("webpack-merge");
+const mergeWebpack = require("webpack-merge");
 const nodeExternals = require("webpack-node-externals");
 const config_1 = require("./config");
 function getNodePartial(options) {
@@ -36,7 +36,7 @@ function getNodePartial(options) {
     return webpackConfig;
 }
 function getNodeWebpackConfig(options) {
-    return webpack_merge_1.merge(config_1.getBaseWebpackPartial(options), getNodePartial(options));
+    return mergeWebpack(config_1.getBaseWebpackPartial(options), getNodePartial(options));
 }
 exports.getNodeWebpackConfig = getNodeWebpackConfig;
 //# sourceMappingURL=node.config.js.map

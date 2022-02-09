@@ -1,5 +1,5 @@
 import { Configuration } from 'webpack';
-import { merge as mergeWebpack }from 'webpack-merge';
+import * as mergeWebpack from 'webpack-merge';
 import * as nodeExternals from 'webpack-node-externals';
 
 import { getBaseWebpackPartial } from './config';
